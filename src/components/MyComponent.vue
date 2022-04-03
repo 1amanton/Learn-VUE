@@ -31,8 +31,11 @@
     <input
         type="number"
         :value="numbers.current"
+        :max="numbers.max"
+        :min="numbers.min"
     >
     <button @click="incrs">+</button>
+    <hr>
   </div>
 
 </template>
