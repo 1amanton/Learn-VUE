@@ -41,7 +41,6 @@
         <span>Страница {{ currentPage }} из {{ pages }}</span>
       </div>
     </div>
-
   </div>
 </template>
 

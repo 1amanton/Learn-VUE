@@ -3,17 +3,21 @@
     <h1>WUSSUP</h1>
     <MyComponent/>
     <UserCard/>
+    <SearchComponent/>
+
   </div>
 </template>
 
 <script>
 import MyComponent from "@/components/MyComponent";
-import UserCard from "@/components/User.Card";
+import UserCard from "@/components/UserCard";
+import SearchComponent from "@/components/SearchComponent";
 
 export default {
   name: 'App',
 
   components: {
+    SearchComponent,
     UserCard,
     MyComponent
   }
