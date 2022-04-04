@@ -4,6 +4,7 @@
       <img v-if="imgVisible"
            class="imgz__monkey"
            :class="imgFilters"
+           :style="changeImgSize"
            src="@/assets/monkey.png"
 
            >
@@ -28,6 +29,26 @@
             :class="imgFilters.zcontrast ? 'btnz__active' : ''"
             @click="imgFilters.zcontrast = !imgFilters.zcontrast"
     >contrast</button>
+
+    <label>
+      WIDTH : {{ imgSize.currentW }}
+      <input type="range"
+             :max="imgSize.maxW"
+             :min="imgSize.minW"
+             :value="imgSize.currentW"
+             @input="imgSize.currentW = $event.target.value"
+      >
+    </label>
+
+    <label>
+      HEIGHT : {{ imgSize.currentH }}
+      <input type="range"
+             :max="imgSize.maxH"
+             :min="imgSize.minH"
+             :value="imgSize.currentH"
+             @input="imgSize.currentH = $event.target.value"
+      >
+    </label>
   </div>
 </template>
 
@@ -43,6 +64,24 @@ export default {
         zsepia: false,
         zborder: false,
         zcontrast: false
+      },
+
+      imgSize: {
+        maxW: 200,
+        minW: 20,
+        maxH: 300,
+        minH: 30,
+        currentW: 100,
+        currentH: 150
+      }
+    }
+  },
+
+  computed: {
+    changeImgSize() {
+      return {
+        width: `${this.imgSize.currentW}px`,
+        height: `${this.imgSize.currentH}px`
       }
     }
   }
