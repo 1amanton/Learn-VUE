@@ -4,6 +4,7 @@
     <MyComponent/>
     <UserCard/>
     <SearchComponent/>
+    <ChangeClasses/>
 
   </div>
 </template>
@@ -12,11 +13,13 @@
 import MyComponent from "@/components/MyComponent";
 import UserCard from "@/components/UserCard";
 import SearchComponent from "@/components/SearchComponent";
+import ChangeClasses from "@/components/ChangeClasses"
 
 export default {
   name: 'App',
 
   components: {
+    ChangeClasses,
     SearchComponent,
     UserCard,
     MyComponent
