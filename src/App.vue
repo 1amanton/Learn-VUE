@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <SupsList/>
     <h1>WUSSUP</h1>
     <MyComponent/>
     <UserCard/>
@@ -10,6 +11,7 @@
 </template>
 
 <script>
+import SupsList from "@/components/SupsList";
 import MyComponent from "@/components/MyComponent";
 import UserCard from "@/components/UserCard";
 import SearchComponent from "@/components/SearchComponent";
@@ -19,6 +21,7 @@ export default {
   name: 'App',
 
   components: {
+    SupsList,
     ChangeClasses,
     SearchComponent,
     UserCard,
