@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <MySetter/>
     <SupsList/>
     <h1>WUSSUP</h1>
     <MyComponent/>
@@ -11,6 +12,7 @@
 </template>
 
 <script>
+import MySetter from "@/components/MySetter";
 import SupsList from "@/components/SupsList";
 import MyComponent from "@/components/MyComponent";
 import UserCard from "@/components/UserCard";
@@ -21,6 +23,7 @@ export default {
   name: 'App',
 
   components: {
+    MySetter,
     SupsList,
     ChangeClasses,
     SearchComponent,
