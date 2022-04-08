@@ -8,6 +8,8 @@
              :title="product.title"
              :price="product.price"
              :color="product.color"
+
+             @addToBasket="addToBasket(product)"
     >
 
     </SupItem>
@@ -29,14 +31,14 @@ export default {
           id: 1,
           img: "https://img2.traektoria.ru/upload/trk_iblock_img/285/12zn0cs0n2ql207nhziiesru8ifooml4.jpg",
           title: "Blue Sup",
-          price: 42999,
+          price: 32999,
           color: "Blue"
         },
         {
           id: 2,
           img: "https://img2.traektoria.ru/upload/trk_iblock_img/b49/0bqj0yilsxioxxszcnxlxmr9hs5nk4qv.jpg",
           title: "Light Sup",
-          price: 42999,
+          price: 38999,
           color: "Light"
         },
         {
@@ -50,7 +52,7 @@ export default {
           id: 4,
           img: "https://img4.traektoria.ru/upload/trk_iblock_img/a18/ogwro08lug4cguxzw0c9luw3u0b32zju.jpg",
           title: "Lightblue Sup",
-          price: 42999,
+          price: 49999,
           color: "Lightblue"
         }
         ,
@@ -60,6 +62,12 @@ export default {
           color: "Def"
         }
       ]
+    }
+  },
+
+  methods: {
+    addToBasket(product) {
+      console.log(`ID: ${product.id}, PRICE: ${product.price}`)
     }
   }
 }

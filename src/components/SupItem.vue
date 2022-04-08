@@ -6,6 +6,7 @@
     <span>TITLE: {{ title }}</span>
     <span>PRICE: {{ price }}</span>
     <span>COLOR: {{ color }}</span>
+    <button @click="addToBasket">Add to Cart</button>
 
   </div>
 </template>
@@ -38,6 +39,12 @@ export default {
 
   data() {
     return {
+    }
+  },
+
+  methods: {
+    addToBasket() {
+      this.$emit("addToBasket")
     }
   }
 }
