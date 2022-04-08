@@ -1,6 +1,15 @@
 <template>
   <div class="productlist">
 
+    <div class="search">
+      <p>Search Sups</p>
+<!--      <input type="text" v-model="searchField">-->
+      <MyInput v-model="searchField" />
+      <button>Find</button>
+      {{ searchField }}
+    </div>
+
+
     <SupItem v-for="product in products"
              :key="product.id"
              :id="product.id"
@@ -18,14 +27,18 @@
 </template>
 
 <script>
+import MyInput from "@/components/MyInput"
 import SupItem from "@/components/SupItem"
 export default {
   name: "SupsList",
-  components: {SupItem},
-
+  components: {
+    MyInput,
+    SupItem
+  },
 
   data() {
     return {
+      searchField: "",
       products: [
         {
           id: 1,
@@ -54,8 +67,7 @@ export default {
           title: "Lightblue Sup",
           price: 49999,
           color: "Lightblue"
-        }
-        ,
+        },
         {
           id: 5,
           price: 0,
@@ -76,6 +88,11 @@ export default {
 <style scoped>
 .productlist {
   display: flex;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
 }
 
 </style>
