@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <ValidateForm/>
     <MySetter/>
     <SupsList/>
     <h1>WUSSUP</h1>
@@ -12,6 +13,7 @@
 </template>
 
 <script>
+import ValidateForm from "@/components/ValidateForm";
 import MySetter from "@/components/MySetter";
 import SupsList from "@/components/SupsList";
 import MyComponent from "@/components/MyComponent";
@@ -23,6 +25,7 @@ export default {
   name: 'App',
 
   components: {
+    ValidateForm,
     MySetter,
     SupsList,
     ChangeClasses,
